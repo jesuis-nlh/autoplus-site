@@ -148,7 +148,7 @@ function materials() {
     rotorEdge: new THREE.MeshPhysicalMaterial({ color: 0x5c5f64, metalness: 1, roughness: 0.55 }),
     hat: new THREE.MeshPhysicalMaterial({ color: 0x2c2f34, metalness: 0.75, roughness: 0.42, clearcoat: 0.4, clearcoatRoughness: 0.3 }),
     caliper: new THREE.MeshPhysicalMaterial({
-      color: new THREE.Color('#F9C300'),
+      color: new THREE.Color('#D4141B'),
       metalness: 0.05,
       roughness: 0.36,
       clearcoat: 1,

@@ -205,7 +205,7 @@ export function Blueprint({ services }: { services: ResolvedService[] }) {
             </div>
           </div>
         ) : (
-          <p className="border-t border-bone-100/15 pt-6 text-steel-300">Sélectionnez un repère jaune pour afficher la prestation correspondante.</p>
+          <p className="border-t border-bone-100/15 pt-6 text-steel-300">Sélectionnez un repère rouge pour afficher la prestation correspondante.</p>
         )}
       </div>
     </div>

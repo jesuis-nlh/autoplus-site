@@ -19,7 +19,7 @@ export const garageAutoPlus: GarageConfig = {
     name: 'Auto Plus Villeurbanne',
     shortName: 'Auto Plus',
     wordmark: { primary: 'AUTO PLUS', secondary: 'Garage · Villeurbanne' },
-    colors: { accent: '#FFD400', accentInk: '#0E0F11' },
+    colors: { accent: '#FF3131', accentInk: '#0E0F11' },
   },
   copy: {
     heroEyebrow: 'Garage automobile · Villeurbanne',
@@ -169,7 +169,7 @@ export const garageAutoPlus: GarageConfig = {
     heroVideo: { mp4: '/media/hero-loop.mp4', webm: '/media/hero-loop.webm', poster: '/media/hero-poster.jpg' },
     heroStill: {
       src: '/media/brake-assembly.png',
-      alt: 'Disque de frein percé et étrier jaune, rendu 3D',
+      alt: 'Disque de frein percé et étrier rouge, rendu 3D',
       width: 2400,
       height: 1800,
     },
