@@ -30,7 +30,7 @@ export default function MentionsLegales() {
             .filter(([, v]) => v)
             .map(([k, v]) => (
               <div key={k} className="grid gap-1 sm:grid-cols-[16rem_1fr]">
-                <dt className="text-ink-700">{k}</dt>
+                <dt className="text-steel-300">{k}</dt>
                 <dd>{v}</dd>
               </div>
             ))}

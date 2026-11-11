@@ -8,10 +8,10 @@ export function Services() {
   const usedCategories = categories.filter((c) => services.some((s) => s.category === c.id));
 
   return (
-    <section id="services" aria-labelledby="services-title" className="theme-light relative bg-bone-100 py-24 text-ink-900 md:py-32 lg:py-40">
+    <section id="services" aria-labelledby="services-title" className="relative bg-ink-950 py-24 text-bone-100 md:py-32 lg:py-40">
       <div className="container-x">
         <SectionHeading
-          tone="light"
+         
           id="services-title"
           index="01"
           kicker="Prestations"

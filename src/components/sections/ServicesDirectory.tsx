@@ -50,25 +50,25 @@ export function ServicesDirectory({ services, categories }: Props) {
               aria-checked={selected}
               onClick={() => choose(f.id)}
               className={`flex h-11 shrink-0 items-center gap-2.5 rounded-full border px-5 text-[0.92rem] transition-[background-color,border-color,color] duration-300 ${
-                selected ? 'border-ink-900 bg-ink-900 text-bone-100' : 'border-ink-900/15 text-ink-900 hover:border-ink-900/50'
+                selected ? 'border-accent bg-accent text-accent-ink' : 'border-bone-100/15 text-bone-100 hover:border-bone-100/50'
               }`}
             >
               {f.label}
-              <span className={`text-[0.75rem] tabular ${selected ? 'text-accent' : 'text-ink-600'}`}>{n}</span>
+              <span className={`text-[0.75rem] tabular ${selected ? 'text-accent-ink' : 'text-steel-400'}`}>{n}</span>
             </button>
           );
         })}
       </div>
 
       <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:gap-12">
-        <ul className="border-t border-ink-900/15 lg:col-span-7" aria-label="Prestations">
+        <ul className="border-t border-bone-100/15 lg:col-span-7" aria-label="Prestations">
           {list.map((s) => {
             const index = String(services.indexOf(s) + 1).padStart(2, '0');
             const isActive = current?.id === s.id;
             const isOpen = expanded === s.id;
             const panelId = `${uid}-${s.id}`;
             return (
-              <li key={s.id} className="border-b border-ink-900/15" data-reveal>
+              <li key={s.id} className="border-b border-bone-100/15" data-reveal>
                 <button
                   type="button"
                   aria-expanded={isOpen}
@@ -83,20 +83,20 @@ export function ServicesDirectory({ services, categories }: Props) {
                 >
                   <span
                     aria-hidden="true"
-                    className={`absolute top-0 left-0 h-px bg-ink-900 transition-[width] duration-700 ease-[var(--ease-out-expo)] ${isActive ? 'w-full' : 'w-0'}`}
+                    className={`absolute top-0 left-0 h-px bg-accent transition-[width] duration-700 ease-[var(--ease-out-expo)] ${isActive ? 'w-full' : 'w-0'}`}
                   />
-                  <span className="label text-ink-600 tabular">{index}</span>
+                  <span className="label text-steel-400 tabular">{index}</span>
                   <span
                     className={`text-[clamp(1.35rem,2.4vw,2.1rem)] leading-tight font-[640] tracking-[-0.025em] [font-stretch:108%] transition-[color,transform] duration-500 ease-[var(--ease-out-expo)] ${
-                      isActive ? 'text-ink-900 lg:translate-x-2' : 'text-ink-900/55 group-hover:text-ink-900'
+                      isActive ? 'text-bone-100 lg:translate-x-2' : 'text-bone-100/55 group-hover:text-bone-100'
                     }`}
                   >
                     {s.title}
                   </span>
-                  <span className="hidden label text-ink-600 md:block">{s.kicker}</span>
+                  <span className="hidden label text-steel-400 md:block">{s.kicker}</span>
                   <span
                     className={`grid size-10 place-items-center rounded-full border transition-[background-color,border-color,color,transform] duration-500 ease-[var(--ease-out-expo)] ${
-                      isActive ? 'border-ink-900 bg-ink-900 text-accent' : 'border-ink-900/20 text-ink-900'
+                      isActive ? 'border-accent bg-accent text-accent-ink' : 'border-bone-100/20 text-bone-100'
                     } ${isOpen ? 'rotate-45' : ''}`}
                   >
                     <Icon name="plus" className="size-4 lg:hidden" />
@@ -118,7 +118,7 @@ export function ServicesDirectory({ services, categories }: Props) {
         <div className="hidden lg:col-span-5 lg:block">
           {current && (
             <div className="sticky top-[calc(var(--header-h)+2rem)]" aria-live="polite">
-              <div key={current.id} className="relative overflow-hidden rounded-[4px] bg-ink-900 p-10 text-bone-100">
+              <div key={current.id} className="relative overflow-hidden rounded-[4px] border border-bone-100/10 bg-ink-850 p-10 text-bone-100">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgb(255_255_255/0.06),transparent_60%)]" aria-hidden="true" />
                 <ServiceGlyph glyph={current.glyph} className="relative mx-auto mb-8 w-[min(100%,15rem)] text-bone-100" />
                 <ServiceDetail service={current} />
@@ -132,7 +132,7 @@ export function ServicesDirectory({ services, categories }: Props) {
 }
 
 function ServiceDetail({ service, compact = false }: { service: ResolvedService; compact?: boolean }) {
-  const muted = compact ? 'text-ink-700' : 'text-steel-300';
+  const muted = compact ? 'text-steel-300' : 'text-steel-300';
   return (
     <div className={`relative ${compact ? 'pb-8 pl-[3.5rem] md:pl-[4.5rem]' : 'intro-fade'}`}>
       {!compact && <p className="label text-accent">{service.kicker}</p>}
@@ -141,7 +141,7 @@ function ServiceDetail({ service, compact = false }: { service: ResolvedService;
       <ul className="mt-6 grid gap-2.5">
         {service.includes.slice(0, 4).map((item) => (
           <li key={item} className="flex gap-3 text-[0.95rem]">
-            <Icon name="check" className={`mt-1 size-4 shrink-0 ${compact ? 'text-ink-900' : 'text-accent'}`} />
+            <Icon name="check" className={`mt-1 size-4 shrink-0 ${'text-accent'}`} />
             <span>{item}</span>
           </li>
         ))}

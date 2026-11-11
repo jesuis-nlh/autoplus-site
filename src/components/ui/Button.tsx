@@ -8,8 +8,8 @@ type Variant = 'primary' | 'outline' | 'outline-dark' | 'ink';
 const variants: Record<Variant, string> = {
   primary: 'bg-accent text-accent-ink hover:brightness-[1.06]',
   outline: 'border border-bone-100/25 text-bone-100 hover:border-bone-100/70 hover:bg-bone-100/[0.06]',
-  'outline-dark': 'border border-ink-900/20 text-ink-900 hover:border-ink-900/70 hover:bg-ink-900/[0.04]',
-  ink: 'bg-ink-900 text-bone-100 hover:bg-ink-700',
+  'outline-dark': 'border border-bone-100/25 text-bone-100 hover:border-bone-100/70 hover:bg-bone-100/[0.06]',
+  ink: 'bg-accent text-accent-ink hover:brightness-[1.06]',
 };
 
 interface ButtonProps {

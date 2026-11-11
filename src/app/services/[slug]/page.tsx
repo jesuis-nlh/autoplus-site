@@ -94,15 +94,15 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
-      <section className="theme-light bg-bone-100 py-20 text-ink-900 md:py-28">
+      <section className="bg-ink-850 py-20 text-bone-100 md:py-28">
         <div className="container-x grid gap-14 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-6">
             <h2 className="display display-m">Ce que comprend la prestation</h2>
-            <p className="mt-6 leading-relaxed text-ink-700">{s.long}</p>
-            <ul className="mt-8 border-t border-ink-900/15">
+            <p className="mt-6 leading-relaxed text-steel-300">{s.long}</p>
+            <ul className="mt-8 border-t border-bone-100/15">
               {s.includes.map((item) => (
-                <li key={item} className="flex gap-4 border-b border-ink-900/15 py-4" data-reveal>
-                  <Icon name="check" className="mt-1 size-4 shrink-0" />
+                <li key={item} className="flex gap-4 border-b border-bone-100/15 py-4" data-reveal>
+                  <Icon name="check" className="mt-1 size-4 shrink-0 text-accent" />
                   {item}
                 </li>
               ))}
@@ -112,13 +112,13 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <h2 className="display display-m">Les signes qui doivent vous alerter</h2>
             <ol className="mt-8 grid gap-4">
               {s.signs.map((sign, i) => (
-                <li key={sign} className="flex gap-5 rounded-[4px] bg-bone-50 p-5" data-reveal>
-                  <span className="pt-1 label text-ink-700 tabular">{String(i + 1).padStart(2, '0')}</span>
+                <li key={sign} className="flex gap-5 rounded-[4px] bg-ink-800 p-5" data-reveal>
+                  <span className="pt-1 label text-steel-300 tabular">{String(i + 1).padStart(2, '0')}</span>
                   {sign}
                 </li>
               ))}
             </ol>
-            <p className="mt-6 text-sm text-ink-700">
+            <p className="mt-6 text-sm text-steel-300">
               Ces signes justifient un contrôle ; seul l’examen du véhicule en atelier permet de déterminer l’intervention nécessaire.
             </p>
           </div>

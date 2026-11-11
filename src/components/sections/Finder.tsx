@@ -17,10 +17,10 @@ export function Finder() {
   const matched = concern ? concern.services.map((id) => services.find((s) => s.id === id)!).filter(Boolean) : [];
 
   return (
-    <section id="orientation" aria-labelledby="finder-title" className="theme-light relative bg-bone-200 py-24 text-ink-900 md:py-32 lg:py-40">
+    <section id="orientation" aria-labelledby="finder-title" className="relative bg-ink-950 py-24 text-bone-100 md:py-32 lg:py-40">
       <div className="container-x">
         <SectionHeading
-          tone="light"
+         
           id="finder-title"
           index="03"
           kicker="Orientation"
@@ -30,7 +30,7 @@ export function Finder() {
 
         <div className="mt-14 grid gap-10 lg:mt-20 lg:grid-cols-12 lg:gap-12">
           <fieldset className="lg:col-span-7">
-            <legend className="mb-5 label text-ink-700">1 · Ce que vous constatez</legend>
+            <legend className="mb-5 label text-steel-300">1 · Ce que vous constatez</legend>
             <div className="grid gap-2.5 sm:grid-cols-2" role="radiogroup" aria-label="Symptôme constaté">
               {availableConcerns.map((c, idx) => {
                 const checked = c.id === concernId;
@@ -44,16 +44,16 @@ export function Finder() {
                     onClick={() => setConcernId(c.id)}
                     data-reveal
                     className={`group flex min-h-16 items-center justify-between gap-4 rounded-[3px] border px-5 py-4 text-left transition-[background-color,border-color,color] duration-300 ${
-                      checked ? 'border-ink-900 bg-ink-900 text-bone-100' : 'border-ink-900/15 bg-bone-50/60 hover:border-ink-900/50'
+                      checked ? 'border-accent bg-accent/10 text-bone-100' : 'border-bone-100/15 bg-ink-850/60 hover:border-bone-100/50'
                     }`}
                   >
                     <span className="flex items-center gap-4">
-                      <span className={`label tabular ${checked ? 'text-accent' : 'text-ink-600'}`}>{String(idx + 1).padStart(2, '0')}</span>
+                      <span className={`label tabular ${checked ? 'text-accent' : 'text-steel-400'}`}>{String(idx + 1).padStart(2, '0')}</span>
                       <span className="font-medium">{c.label}</span>
                     </span>
                     <span
                       aria-hidden="true"
-                      className={`grid size-5 shrink-0 place-items-center rounded-full border transition-colors ${checked ? 'border-accent bg-accent' : 'border-ink-900/30'}`}
+                      className={`grid size-5 shrink-0 place-items-center rounded-full border transition-colors ${checked ? 'border-accent bg-accent' : 'border-bone-100/30'}`}
                     >
                       {checked && <span className="size-1.5 rounded-full bg-ink-900" />}
                     </span>
@@ -65,8 +65,8 @@ export function Finder() {
 
           <div className="lg:col-span-5">
             <div className="lg:sticky lg:top-[calc(var(--header-h)+2rem)]">
-              <p className="mb-5 label text-ink-700">2 · Notre recommandation</p>
-              <div id={`${uid}-result`} aria-live="polite" className="relative min-h-[22rem] overflow-hidden rounded-[4px] bg-ink-900 p-7 text-bone-100 sm:p-9">
+              <p className="mb-5 label text-steel-300">2 · Notre recommandation</p>
+              <div id={`${uid}-result`} aria-live="polite" className="relative min-h-[22rem] overflow-hidden rounded-[4px] border border-bone-100/10 bg-ink-850 p-7 text-bone-100 sm:p-9">
                 {!concern ? (
                   <div className="flex h-full min-h-[18rem] flex-col justify-between">
                     <svg viewBox="0 0 200 80" className="w-40 text-bone-100/40" aria-hidden="true" fill="none" stroke="currentColor">
@@ -106,7 +106,7 @@ export function Finder() {
                   </div>
                 )}
               </div>
-              <p className="mt-4 text-sm text-ink-700">
+              <p className="mt-4 text-sm text-steel-300">
                 Ce guide vous oriente : il ne remplace pas un contrôle du véhicule en atelier et ne préjuge pas de la réparation nécessaire.
               </p>
             </div>

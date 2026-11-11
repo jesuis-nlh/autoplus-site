@@ -34,9 +34,9 @@ export function Garage() {
   ];
 
   return (
-    <section id="garage" aria-labelledby="garage-title" className="theme-light relative overflow-hidden bg-bone-100 py-24 text-ink-900 md:py-32 lg:py-40">
+    <section id="garage" aria-labelledby="garage-title" className="relative overflow-hidden bg-ink-850 py-24 text-bone-100 md:py-32 lg:py-40">
       <div className="container-x">
-        <SectionHeading tone="light" id="garage-title" index="05" kicker="Notre garage" title={copy.garageTitle} />
+        <SectionHeading id="garage-title" index="05" kicker="Notre garage" title={copy.garageTitle} />
 
         <div className="mt-14 grid gap-14 lg:mt-20 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-5 lg:col-start-1">
@@ -44,14 +44,14 @@ export function Garage() {
               {copy.garageIntro}
             </p>
             {copy.garageBody.map((p) => (
-              <p key={p} className="mt-6 leading-relaxed text-ink-700" data-reveal>
+              <p key={p} className="mt-6 leading-relaxed text-steel-300" data-reveal>
                 {p}
               </p>
             ))}
-            <dl className="mt-12 grid gap-0 border-t border-ink-900/15">
+            <dl className="mt-12 grid gap-0 border-t border-bone-100/15">
               {facts.map((f) => (
-                <div key={f.label} className="grid grid-cols-[8rem_1fr] gap-4 border-b border-ink-900/15 py-4" data-reveal>
-                  <dt className="pt-1 label text-ink-700">{f.label}</dt>
+                <div key={f.label} className="grid grid-cols-[8rem_1fr] gap-4 border-b border-bone-100/15 py-4" data-reveal>
+                  <dt className="pt-1 label text-steel-300">{f.label}</dt>
                   <dd>{f.value}</dd>
                 </div>
               ))}
@@ -75,11 +75,11 @@ export function Garage() {
               </div>
             ) : (
               <figure className="relative">
-                <div className="relative overflow-hidden rounded-[4px] bg-[radial-gradient(circle_at_50%_40%,#ffffff_0%,var(--color-bone-200)_70%)]">
+                <div className="relative overflow-hidden rounded-[4px] bg-[radial-gradient(circle_at_50%_40%,#2c2f35_0%,var(--color-ink-900)_70%)]">
                   {/* Repères d'angle façon planche technique */}
                   <svg
                     aria-hidden="true"
-                    className="absolute inset-4 h-[calc(100%-2rem)] w-[calc(100%-2rem)] text-ink-900/40"
+                    className="absolute inset-4 h-[calc(100%-2rem)] w-[calc(100%-2rem)] text-bone-100/40"
                     preserveAspectRatio="none"
                     viewBox="0 0 100 100"
                     fill="none"
@@ -96,10 +96,10 @@ export function Garage() {
                       className="h-auto w-full"
                     />
                   </div>
-                  <p className="absolute top-6 left-7 label text-ink-700">Fig. 01</p>
-                  <p className="absolute right-7 bottom-6 label text-ink-700">Roue · disque · étrier</p>
+                  <p className="absolute top-6 left-7 label text-steel-300">Fig. 01</p>
+                  <p className="absolute right-7 bottom-6 label text-steel-300">Roue · disque · étrier</p>
                 </div>
-                {media.illustrativeNotice && <figcaption className="mt-3 text-sm text-ink-700">{media.illustrativeNotice}</figcaption>}
+                {media.illustrativeNotice && <figcaption className="mt-3 text-sm text-steel-300">{media.illustrativeNotice}</figcaption>}
               </figure>
             )}
           </div>
@@ -107,12 +107,12 @@ export function Garage() {
       </div>
 
       {/* Bandeau des quartiers desservis */}
-      <div aria-hidden="true" className="mt-24 overflow-hidden border-y border-ink-900/15 py-6 md:mt-32">
+      <div aria-hidden="true" className="mt-24 overflow-hidden border-y border-bone-100/15 py-6 md:mt-32">
         <div className="flex w-max [animation:marquee_60s_linear_infinite] gap-10 whitespace-nowrap">
           {[...areaServed, ...areaServed].map((z, k) => (
             <span
               key={k}
-              className="flex items-center gap-10 text-[clamp(1.8rem,4vw,3.6rem)] font-[700] tracking-[-0.03em] text-ink-900/85 [font-stretch:115%]"
+              className="flex items-center gap-10 text-[clamp(1.8rem,4vw,3.6rem)] font-[700] tracking-[-0.03em] text-bone-100/85 [font-stretch:115%]"
             >
               {z}
               <span className="size-3 bg-accent" />
